@@ -25,12 +25,12 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly redundant, in addition to restricting traffic to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+Load balancing ensures that the application will be highly **redundant**, in addition to restricting **traffic** to the network.
+- TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?  The load balancers protect the system from DDos attacks and they do this by shifting the attack traffic. The main advantage of a jump box is that it can give access to the user from a single node or origin point that can be secured and monitored and helps to connect to other servers or untrusted networks environments.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the __data___ and system __logs___.
+- _TODO: What does Filebeat watch for? Filebeat monitors and watches the specified log files or locations and collects the log events and forwards them to Elasticsearch or Logstash for indexing.
+- _TODO: What does Metricbeat record? Metricbeat records and collects metrics from the system and services running on the server such Apache and other services.  It takes these metrics and ships them to the specified output such as Elasticsearch.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -38,27 +38,28 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Name         | Function | IP Address | Operating System |
 |--------------|----------|------------|------------------|
 | Jump Box     | Gateway  | 10.0.0.4   | Linux            |
-| DBWA-1       |          | 10.0.0.5   | Linux            |
-| DBWA-2       |          | 10.0.0.6   | Linux            |
-| ELK-Stack-VM |          | 10.1.0.4   |                  |
+| DBWA-1       | Server   | 10.0.0.5   | Linux            |
+| DBWA-2       | Server   | 10.0.0.6   | Linux            |
+| ELK-Stack-VM | Server   | 10.1.0.4   | Linux            |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the __jump box___ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- _TODO: 5601 Kibana port
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by __Jump Box___.
+- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_ Jump Box VM; Virtual Network IP: 10.0.0.4
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Name         | Publicly Accessible | Allowed IP Addresses |
+|--------------|---------------------|----------------------|
+| Jump Box     | Yes                 | HOME IP              |
+| DBWA-1       | No                  | 10.0.0.4             |
+| DBWA-2       | No                  | 10.0.0.4             |
+| ELK-Stack_VM | No                  | 10.0.0.4             |
 
 ### Elk Configuration
 
