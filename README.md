@@ -64,7 +64,7 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+- _TODO: What is the main advantage of automating configuration with Ansible?_ The main advantage of using ansible is that it lets you model highly complex IT workflows, it is a free open source tool, and no special coding skills are required.    
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
@@ -77,7 +77,7 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- _TODO: List the IP addresses of the machines you are monitoring_  This system is monitoring DBWA-1, 10.0.0.5 and DBWA-2, 10.0.0.6
 
 We have installed the following Beats on these machines:
 - _TODO: Specify which Beats you successfully installed_
