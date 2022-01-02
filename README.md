@@ -76,17 +76,17 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+![docker output screenshot called: ELK Container Running](https://github.com/mjt323/Cloud-Security-Project/blob/main/Diagrams/Elk%20Container%20Running.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_  This system is monitoring DBWA-1, 10.0.0.5 and DBWA-2, 10.0.0.6
+- _TODO: List the IP addresses of the machines you are monitoring_  This system is monitoring DBWA-1, 10.0.0.5 and DBWA-2, 10.0.0.6  (I called them DBWA instead of DVWA because I heard th letter incorrectly, but just kept with it because it was too late too change- thank you for understanding!)
 
 We have installed the following Beats on these machines:
 - _TODO: Specify which Beats you successfully installed_  I installed Filebeat and Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._  Filebeat is files and directorires; metricbeat focuses on system and memory, etc.
+- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._  Filebeat collects data that includes files and directorires.  The Metricbeat focuses on system and memory and collects various data related to those items.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
@@ -102,3 +102,8 @@ _TODO: Answer the following questions to fill in the blanks:_
 - _Which URL do you navigate to in order to check that the ELK server is running?
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+The commands to run are as follows:
+- ansible playbook filebeat.yml
+- ansible playbook metricbeat.yml
+- ansible playbook host.yml
+- ansible playbook elkplaybook.yml
