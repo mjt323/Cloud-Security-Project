@@ -101,7 +101,7 @@ SSH into the control node and follow the steps below:
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_  The playbook is the playbook.yml file.  I copy it to the jump box server so then in can run a playbook for the virtual machines attached.
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_  I updated the host file and specified which machine by including the corresponding IP addresses for each virtual machine and ELK server.
-- _Which URL do you navigate to in order to check that the ELK server is running?  
+- _Which URL do you navigate to in order to check that the ELK server is running?  I used the 5601 Kibana port, Public IP: 40.122.161.185
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 The commands to run are as follows:
