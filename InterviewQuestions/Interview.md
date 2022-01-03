@@ -54,7 +54,7 @@ Make sure each section of your response answers the questions laid out below.
 2. Provide a Concrete Example Scenario
     - In Project 1, did you allow SSH traffic to all of the VMs on your network?  I did not allow SSh traffic to all of the VM's, only to the jump box.
     - Which VMs did accept SSH connections?  It was sent to the Jump Box
-    - What happens if you try to connect to a VM that does not accept SSH connections? Why?  
+    - What happens if you try to connect to a VM that does not accept SSH connections? Why?   It will get blocked by the firewall and the firewall NSG rules are in place to block it.  It could be because the VM that was input was not correct.  
 
 3. Explain the Solution Requirements
     - If one of your Project 1 VMs accepted SSH connections, what would you assume the source of the error is?
