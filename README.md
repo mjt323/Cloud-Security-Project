@@ -12,6 +12,8 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
   - _TODO: Enter the playbook file._ The name of the file is: playbook.yml
 
+[Playbook and Configuration files labeled accordingly](https://github.com/mjt323/Cloud-Security-Project/tree/main/Ansible)
+
 This document contains the following details:
 - Description of the Topologu
 - Access Policies
