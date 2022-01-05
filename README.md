@@ -59,9 +59,9 @@ A summary of the access policies in place can be found in the table below.
 | Name         | Publicly Accessible | Allowed IP Addresses |
 |--------------|---------------------|----------------------|
 | Jump Box     | Yes                 | HOME IP              |
-| DBWA-1       | No                  | 10.0.0.4             |
-| DBWA-2       | No                  | 10.0.0.4             |
-| ELK-Stack_VM | No                  | 10.0.0.4             |
+| DBWA-1       | No                  | 10.0.0.4 / 10.0.0.5  |
+| DBWA-2       | No                  | 10.0.0.4 / 10.0.0.6  |
+| ELK-Stack_VM | Yes thru http       | 10.0.0.4             |
 
 ### Elk Configuration
 
@@ -105,7 +105,16 @@ _TODO: Answer the following questions to fill in the blanks:_
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 The commands to run are as follows:
-- ansible playbook filebeat.yml
-- ansible playbook metricbeat.yml
-- ansible playbook host.yml
-- ansible playbook elkplaybook.yml
+- install-filebeat.yml
+- ansible-playbook filebeat-playbook.yml
+
+- install-metricbeat.yml
+- ansible-playbook metricbeat-playbook.yml
+
+- ansible-playbook host.yml
+
+- install-elk.yml
+- ansible-playbook elk-playbook.yml
+
+
+
