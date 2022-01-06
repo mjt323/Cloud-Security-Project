@@ -9,7 +9,7 @@
 ### Instructions 
 
 1. Choose one of the following domains:
-    - Network security
+    - **Network security**
     - Cloud security
     - Logging and monitoring
 
@@ -50,6 +50,26 @@ Suppose you have a firewall that's supposed to block SSH connections, but instea
 Make sure each section of your response answers the questions laid out below.
 ​
 1. Restate the Problem: There is a firewall that's supposed to block SSH connections, but it let's them through.  How do we debug this?
+
+**Question 1:  Faulty Firewall**
+
+Suppose you have a firewall that's supposed to block SSH connections, but instead lets them through. How would you debug it?
+
+A way to debug and troubleshoot this issue of connections getting through is to first verify that the SSH is installed correctly on the system.  You can type ssh into the terminal to check if the SSh client is properly installed.
+
+I allowed SSH traffic to the JumpBox and ELK Stack VM and those are the ones that accept SSH connections.  If I try to connect to a VM that does not accept connections, that most likely means that the SSH was not set up for that machine.  
+
+If one of the VM’s accepted SSH connections, it would be assumed that the source of the error is the set up of the SSH client.  Some of the general configurations to check and actions to take would be using the bash utility to test the SSH connections, using SSH to check SSH connection, and using nmap to test the connection.
+
+In the Azure User Interface there are some specific areas to look at including the Network tab to learn about the secure connections.  I would check the static vs. dynamic configuration and review the ports to ensure accurate reporting.  As mentioned before, to test that the fix is effective would be to use the terminal to run the SSH to the VM’s to ensure that they are connecting or not.  
+
+These solutions of course do not guarantee that the network is immune to all unauthorized access, however the measures put in place will be highly effective.  One way to do this is to to use the  Azure Active Directory Privileged Identity Management (PIM) to help monitor for suspicious attacks.
+
+
+Sources:
+https://likegeeks.com/ssh-connection-refused/
+https://www.golinuxcloud.com/test-ssh-connection/
+
 
 2. Provide a Concrete Example Scenario
     - In Project 1, did you allow SSH traffic to all of the VMs on your network?  I did not allow SSh traffic to all of the VM's, only to the jump box.
